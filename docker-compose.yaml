@@ -14,7 +14,7 @@ services:
     image: semaphoreui/semaphore:v2.9.4
     user: "${UID}:${GID}"
     ports:
-      - 8000:3000
+      - 3000:3000 #Make this suit your needs in the format of: PortOnHost:PortOnContainer
     environment:
       - SEMAPHORE_DB_USER= #From MySQL Container Above
       - SEMAPHORE_DB_PASS= #From MySQL Container Above
