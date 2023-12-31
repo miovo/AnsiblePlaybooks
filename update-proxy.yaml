@@ -1,0 +1,9 @@
+---
+- hosts: all
+
+  become: true
+  tasks:
+    - name: Run container
+      shell:
+        cmd: "docker compose down && docker compose pull && docker compose up -d"
+        chdir: /home/cole/proxy
