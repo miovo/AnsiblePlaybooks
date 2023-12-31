@@ -3,5 +3,7 @@
 
   become: true
   tasks:
-    - name: reboot
-      reboot:
+    - name: Run container
+      shell:
+        cmd: "docker compose down && sudo docker compose up -d"
+        chdir: /home/cole/proxy
